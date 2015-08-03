@@ -1,13 +1,13 @@
 bin_PROGRAMS = \
-	topology
+	alsatplg
 
-toplogy_SOURCES = topology.c
+alsatplg_SOURCES = topology.c
 
 AM_CPPFLAGS = \
          -Wall -I$(top_srcdir)/include
 
-topology_LDADD = -lasound
+alsatplg_LDADD = -lasound
 
 # local build
 AM_CPPFLAGS += -I$(top_srcdir)/../alsa-lib/include
-topology_LDADD = -L$(top_srcdir)/../alsa-lib/src/.libs
+alsatplg_LDADD = -L$(top_srcdir)/../alsa-lib/src/.libs
